@@ -3,127 +3,176 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Genesis RP - Pravidla</title>
 
-<meta property="og:title" content="Genesis RP">
-<meta property="og:description" content="Oficiální pravidla serveru Genesis RP">
-<meta property="og:image" content="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {margin:0;padding:0;box-sizing:border-box;}
-
 body {
-    font-family: Arial, sans-serif;
-    background: #0a0a0a;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #140000, #000);
     color: white;
 }
 
-/* HERO */
+nav {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0,0,0,0.8);
+    border-bottom: 1px solid rgba(255,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+
+nav h2 {
+    color: #ff2b2b;
+    text-shadow: 0 0 12px #ff0000;
+}
+
 .hero {
-    height: 50vh;
-    background: url('logo.png') center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    text-align: center;
+    padding: 80px 20px 60px;
 }
 
 .hero h1 {
-    font-size: 60px;
-    background: linear-gradient(90deg, red, darkred);
-    -webkit-background-clip: text;
-    color: transparent;
+    font-size: 46px;
+    color: #ff2b2b;
+    text-shadow: 0 0 25px #ff0000;
 }
 
-/* OBSAH */
+.hero p {
+    opacity: 0.7;
+}
+
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
-    padding: 30px;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
 }
 
 .rule {
-    background: rgba(120,0,0,0.2);
-    border: 1px solid rgba(255,0,0,0.3);
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 12px;
-    transition: 0.2s;
+    background: rgba(255, 0, 0, 0.04);
+    border: 1px solid rgba(255, 0, 0, 0.15);
+    padding: 22px;
+    border-radius: 14px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.rule::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255,0,0,0.2), transparent);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.rule:hover::before {
+    opacity: 1;
 }
 
 .rule:hover {
-    background: rgba(150,0,0,0.3);
-    transform: translateY(-3px);
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 0 30px rgba(255,0,0,0.6);
+    border-color: #ff2b2b;
+}
+
+.rule h3 {
+    margin: 0 0 10px;
+    color: #ff2b2b;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.rule p {
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* ANIMATION */
+.rule {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s forwards;
+}
+
+.rule:nth-child(n) {
+    animation-delay: calc(0.05s * var(--i));
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.5;
+    border-top: 1px solid rgba(255,0,0,0.2);
+    margin-top: 60px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-    <h1>GENESIS RP</h1>
-</div>
+<nav>
+<h2>Genesis RP</h2>
+</nav>
+
+<section class="hero">
+<h1>PRAVIDLA SERVERU</h1>
+<p>Realismus • Respekt • Kvalitní RolePlay</p>
+</section>
 
 <div class="container">
+<div class="grid">
 
-<div class="rule">Na serveru je povinnost chovat se realisticky a přizpůsobit své chování tomu, jak by se člověk choval v reálném životě. Každá akce musí dávat smysl a musí být odůvodněná v rámci RolePlay. Jakékoliv nesmyslné nebo neadekvátní chování, které by v reálném světě nebylo možné, je považováno za porušení pravidel.</div>
+<div class="rule" style="--i:1"><h3><b>Realistické chování</b></h3><p>Každý hráč musí jednat realisticky a logicky jako v reálném životě.</p></div>
+<div class="rule" style="--i:2"><h3><b>Znalost pravidel</b></h3><p>Neznalost pravidel neomlouvá.</p></div>
+<div class="rule" style="--i:3"><h3><b>Cheaty a bugy</b></h3><p>Zákaz cheatů a zneužívání bugů. Povinnost nahlásit.</p></div>
+<div class="rule" style="--i:4"><h3><b>RolePlay</b></h3><p>Plné vžití do postavy a realistické reakce.</p></div>
+<div class="rule" style="--i:5"><h3><b>Metagaming</b></h3><p>Zákaz využívání informací mimo hru.</p></div>
+<div class="rule" style="--i:6"><h3><b>Powergaming</b></h3><p>Zákaz nereálných akcí a nucení výsledků.</p></div>
+<div class="rule" style="--i:7"><h3><b>FailRP</b></h3><p>Ignorování reality a situace.</p></div>
+<div class="rule" style="--i:8"><h3><b>NVL</b></h3><p>Nevážení si života je zakázáno.</p></div>
+<div class="rule" style="--i:9"><h3><b>FearRP</b></h3><p>Postava musí mít strach o život.</p></div>
+<div class="rule" style="--i:10"><h3><b>Mixing</b></h3><p>Zákaz míchání IC a OOC.</p></div>
+<div class="rule" style="--i:11"><h3><b>Combat Logging</b></h3><p>Zákaz odpojení během RP.</p></div>
+<div class="rule" style="--i:12"><h3><b>Stream Sniping</b></h3><p>Získávání výhody ze streamu je zakázáno.</p></div>
+<div class="rule" style="--i:13"><h3><b>RDM</b></h3><p>Zabití bez RP důvodu je zakázáno.</p></div>
+<div class="rule" style="--i:14"><h3><b>VDM</b></h3><p>Používání auta jako zbraně je zakázáno.</p></div>
+<div class="rule" style="--i:15"><h3><b>RP akce</b></h3><p>Každá akce musí mít příběh.</p></div>
+<div class="rule" style="--i:16"><h3><b>Jízda vozidel</b></h3><p>Řízení musí být realistické.</p></div>
+<div class="rule" style="--i:17"><h3><b>Více postav</b></h3><p>Zákaz zneužívání více postav.</p></div>
+<div class="rule" style="--i:18"><h3><b>/me a /do</b></h3><p>Příkazy pro popis akcí a situací.</p></div>
+<div class="rule" style="--i:19"><h3><b>Gross RP</b></h3><p>Citlivé RP jen se souhlasem hráčů.</p></div>
+<div class="rule" style="--i:20"><h3><b>Kill on Sight</b></h3><p>Povoleno jen ve výjimečných situacích.</p></div>
+<div class="rule" style="--i:21"><h3><b>Revenge Kill</b></h3><p>Pomsta až po čase a s RP důvodem.</p></div>
+<div class="rule" style="--i:22"><h3><b>Player Kill</b></h3><p>Ztráta paměti před smrtí.</p></div>
+<div class="rule" style="--i:23"><h3><b>Character Kill</b></h3><p>Trvalá smrt postavy.</p></div>
+<div class="rule" style="--i:24"><h3><b>Second CK</b></h3><p>Schválený trvalý konec postavy.</p></div>
+<div class="rule" style="--i:25"><h3><b>Zranění</b></h3><p>Musí být odehrána realisticky.</p></div>
+<div class="rule" style="--i:26"><h3><b>Passive RP</b></h3><p>Následky musí být odehrány.</p></div>
+<div class="rule" style="--i:27"><h3><b>Hood Fear</b></h3><p>Respektování gang území.</p></div>
+<div class="rule" style="--i:28"><h3><b>Chování k AT</b></h3><p>Respektuj Admin Team. Nehádej se, nelži a spolupracuj.</p></div>
 
-<div class="rule">Každý hráč je plně zodpovědný za to, že zná všechna pravidla serveru. Neznalost pravidel neomlouvá žádné porušení a může vést k postihu, včetně kicku, banu nebo jiných trestů dle závažnosti situace.</div>
-
-<div class="rule">Je přísně zakázáno používat jakékoliv cheaty, skripty nebo externí programy, které poskytují výhodu nad ostatními hráči. Stejně tak je zakázáno jakékoliv zneužívání herních chyb, bugů nebo exploitů. Pokud hráč objeví chybu, je povinen ji okamžitě nahlásit administrátorům.</div>
-
-<div class="rule">RolePlay znamená plné vžití se do své postavy a hraní její role realistickým způsobem. Hráč nesmí jednat mimo charakter své postavy ani ignorovat logiku situace. Každá reakce musí odpovídat reálnému chování člověka v dané situaci.</div>
-
-<div class="rule">Metagaming je přísně zakázán. Znamená to využívání informací, které hráč získal mimo herní prostředí, například z Discordu, streamů nebo od jiných hráčů mimo RP. Takové chování narušuje férovost hry a kazí zážitek ostatním.</div>
-
-<div class="rule">Powergaming znamená vynucování akce bez možnosti reakce druhé strany nebo provádění nereálných úkonů, které by nebyly možné v reálném světě. RolePlay musí vždy umožnit interakci obou stran a nesmí nutit výsledek jedné strany bez šance na reakci.</div>
-
-<div class="rule">FailRP nastává v situacích, kdy hráč ignoruje realitu nebo logiku hry. Například nereaguje na zranění, chová se absurdně v nebezpečné situaci nebo ignoruje okolní dění, které by mělo mít vliv na jeho chování.</div>
-
-<div class="rule">NVL znamená, že hráč si dostatečně neváží svého života. Pokud je postava ohrožena například zbraní, musí reagovat realisticky a přizpůsobit své chování situaci, ve které je v jasné nevýhodě.</div>
-
-<div class="rule">FearRP znamená, že hráč musí při ohrožení života reagovat strachem a logicky se podřídit situaci. Hrdinské chování bez důvodu je považováno za porušení pravidel.</div>
-
-<div class="rule">Mixing je zakázáno a znamená spojování IC (herních) a OOC (mimoherních) informací. Hráč nesmí používat informace z reálného světa ve hře ani opačně.</div>
-
-<div class="rule">Combat Logging znamená úmyslné odpojení ze hry během aktivní RP situace, například během přestřelky nebo zatýkání. Toto chování je zakázáno, protože poskytuje nespravedlivou výhodu.</div>
-
-<div class="rule">Stream sniping je získávání výhody sledováním streamu jiného hráče. Takové chování narušuje férovost a je přísně zakázáno.</div>
-
-<div class="rule">RDM znamená zabití hráče bez předchozí interakce nebo bez RP důvodu. Každá agrese musí mít logiku a RP základ.</div>
-
-<div class="rule">VDM znamená používání vozidla jako zbraně proti hráčům. Úmyslné najíždění do lidí bez RP důvodu je zakázáno.</div>
-
-<div class="rule">Každá RP akce musí být postavena na příběhu a musí mít důvod. Náhodné přepady nebo bezdůvodné akce nejsou povoleny a musí být vždy podloženy RP situací.</div>
-
-<div class="rule">Jízda vozidlem musí být realistická a odpovídat fyzice. Není dovoleno ignorovat realitu, například skákat ze skály se sportovním autem nebo jezdit extrémně nereálně.</div>
-
-<div class="rule">Každá postava musí být jedinečná a mít vlastní identitu. Není dovoleno využívat více postav k získání výhody nebo je mezi sebou propojovat.</div>
-
-<div class="rule">Příkaz /me slouží k popisu akce, kterou tvoje postava provádí, zatímco /do slouží k popisu situace nebo výsledku akce, aby ostatní hráči mohli správně reagovat.</div>
-
-<div class="rule">Gross RP zahrnuje extrémní nebo citlivé roleplay situace, které musí být odehrány s respektem a často vyžadují souhlas všech zúčastněných hráčů.</div>
-
-<div class="rule">Kill on Sight znamená zabití bez interakce. Takové chování je povoleno pouze v extrémních RP situacích, jinak je zakázáno.</div>
-
-<div class="rule">Revenge kill znamená pomstu po smrti. Po smrti si hráč nesmí pamatovat okolnosti své smrti a pomsta je povolena až po delší době, například 24 hodin reálného času, a musí mít RP logiku.</div>
-
-<div class="rule">Player Kill znamená, že postava zapomíná poslední události před smrtí, ale může pokračovat ve svém příběhu dál.</div>
-
-<div class="rule">Character Kill znamená úplný konec postavy, která je navždy odstraněna a hráč ji již nemůže používat.</div>
-
-<div class="rule">Second Character Kill je definitivní odstranění postavy, které musí být schváleno administrátorem a používá se pouze při velmi vážných RP situacích.</div>
-
-<div class="rule">Zranění musí být vždy odehrána realisticky, včetně bolesti, omezení pohybu a dopadů na chování postavy.</div>
-
-<div class="rule">Passive RolePlay znamená odehrávání následků situací i bez aktivní interakce hráče, například dlouhodobé následky zranění nebo situací.</div>
-
-<div class="rule">Hood Fear znamená respektování území gangů a jejich převahy. Na jejich teritoriu musí hráč jednat opatrně a realisticky, jinak riskuje následky v RP.</div>
-
+</div>
 </div>
 
 <footer>
-© 2026 FiveM RP SERVER | Genensis RolePlay
+© 2026 Genesis RP
 </footer>
 
 </body>
